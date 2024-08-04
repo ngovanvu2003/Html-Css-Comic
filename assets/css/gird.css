@@ -26,8 +26,8 @@ Prefix class:
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -4px;
-  margin-right: -4px;
+  /* margin-left: -4px;
+  margin-right: -4px; */
 }
 
 .row.no-gutters {

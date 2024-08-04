@@ -10,7 +10,7 @@ themeToggler.onclick = () => {
 };
 document.addEventListener("DOMContentLoaded", function () {
   const themeToggler = document.querySelector("#on-search");
-  const content = document.querySelector("#content");
+  const content = document.querySelector("#content-search");
   const overlay = document.querySelector("#overlay");
 
   themeToggler.addEventListener("click", function () {
