@@ -18,7 +18,7 @@ html {
   --white: #ffffff;
   --bg-button: #bf2c24;
   --bg-nav: #3e3d43;
-  --color-icon:
+  --bg-nav-mb: #313035;
   --border: 0.1rem solid rgba(0, 0, 0, 0.2);
   --border-color: hsla(0, 0%, 100%, 0.2);
 }
@@ -98,11 +98,11 @@ a , i , button {
 }
 #theme-toggler {
   font-size: 1.2rem;
-  padding-right: 15px;
+  padding-right: 12px;
 }
 #overlay {
   position: fixed;
-  top:2;
+  top:0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -133,10 +133,31 @@ a , i , button {
 
 .main-nav {
   background-color: var(--bg-nav);
-  padding: 12px 0;
+ 
 }
 .genres {
+  /* padding: 15px 0; */
   background-color: #313035;
+  padding: 12px 0;
+}
+.genres a{
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap :10px;
+}
+
+
+.filter {
+  /* padding: 15px 0; */
+  background-color: #313035;
+  padding: 12px 0;
+}
+.filter a{
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap :10px;
 }
 .main-nav-content {
   justify-content: space-between;
@@ -154,31 +175,42 @@ a , i , button {
 }
 
 /*----- End Main Nav ----- */
-
+ /* .input-search {
+  width: 61.5vh;
+} */
 @media screen and (max-width: 1300px) {
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1022px) {
+  .form-search {
+    display: flex;
+    width: 100%;
+  }
   .form-search input {
-    width: 200px;
+    width: 80%;
     height: 42px;
     line-height: 42px;
   }
   .form-search button {
-    padding: 0 20px;
+    width: 20%;
     height: 42px;
     line-height: 42px;
   }
   .form-search-mb {
     font-size: 1.2rem;
     display: block;
-    padding-right: 15px;
+    padding-right: 12px;
   }
-  .form-search {
+  .main-search {
     display: none;
   }
-
-
+  .sort-dropdown{
+    display: none;
+  }
+  .main-nav {
+    background-color: var(--bg-nav-mb);
+ 
+ }
 }
 
 @media (max-width: 568px) {
@@ -191,8 +223,13 @@ a , i , button {
     height: 42px;
   }
   .btn {
-    font-size: 11px;
-    padding: 7px 7px;
+    font-size: 13px;
+    padding: 8px 8px;
     }
+
+  /* .main-nav-content{
+    justify-content: ;
+  } */
+
 }
 

@@ -7,12 +7,13 @@
     <!-- Link Icons -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
+
     <!-- import icon font awesome -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
     />
     <link rel="stylesheet" href="./assets/css/gird.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -30,9 +31,10 @@
             />
             <!-- Form Search -->
           </div>
-          <div class="">
+          <div id="overlay"></div>
+          <div class="main-search">
             <form class="form-search">
-              <input type="text" />
+              <input type="search" placeholder="Nhập từ khóa tìm kiếm" />
               <button type="btn submit">Tìm kiếm</button>
             </form>
           </div>
@@ -42,6 +44,7 @@
             <div class="form-search-mb">
               <i id="on-search" class="fa-solid fa-magnifying-glass"></i>
             </div>
+
             <!-- Account -->
             <div id="theme-toggler" class="fas fa-moon"></div>
             <div class="btn login">Đăng nhập</div>
@@ -51,8 +54,8 @@
       </div>
 
       <div id="content-search">
-        <form>
-          <input type="text" />
+        <form class="form-search">
+          <input type="search" placeholder="Nhập từ khóa tìm kiếm" />
           <button type="btn submit">Tìm kiếm</button>
         </form>
       </div>
@@ -67,21 +70,28 @@
               ><i class="fas fa-bars"></i> Thể loại</a
             >
           </div>
-
           <div class="sort-dropdown">
             <ul>
               <li><a href="#">Truyện đẫu</a></li>
               <li><a href="#">Truyện sau</a></li>
               <li><a href="#">Truyện màu</a></li>
+              <li><a href="#">Truyện sau</a></li>
+              <li><a href="#">Truyện màu</a></li>
             </ul>
+          </div>
+          <div class="filter">
+            <a href="#" class=""
+              ><i class="fa-solid fa-filter"></i>Lọc truyện</a
+            >
           </div>
         </div>
       </div>
     </nav>
     <main>
       <h1>haha</h1>
+      <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
     </main>
-    <div id="overlay"></div>
+
     <!-- End Menu -->
     <script src="./assets/js/main.js"></script>
   </body>
