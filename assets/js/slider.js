@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateDots();
 
     // Tự động chuyển slide sau mỗi 5 giây
-    // setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 5000);
   }
 
   const slider = document.getElementById("cascade-slider");
