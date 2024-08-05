@@ -6,795 +6,296 @@
     <title>Document</title>
   </head>
   <style>
-    @import url("https://api.fontshare.com/v2/css?f[]=archivo@100,200,300,400,500,600,700,800,900&f[]=clash-display@200,300,400,500,600,700&display=swap");
+    /* Please ❤ this if you like it! */
 
-    :root {
-      --slide-width: min(25vw, 300px);
-      --slide-aspect: 2 / 3;
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
-      --slide-transition-duration: 800ms;
-      --slide-transition-easing: ease;
-
-      --font-archivo: "Archivo", sans-serif;
-      --font-clash-display: "Clash Display", sans-serif;
-    }
-
-    * {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-    }
-
-    body {
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-
-      background: rgba(0, 0, 0, 0.787);
-    }
-
-    button {
-      border: none;
-      background: none;
-      cursor: pointer;
-      &:focus {
-        outline: none;
-        border: none;
-      }
-    }
-
-    /* ------------------------------------------------ */
-    /* -------------------- SLIDER -------------------- */
-    /* ------------------------------------------------ */
-
-    .slider {
-      width: calc(3 * var(--slide-width));
-      height: calc(2 * var(--slide-height));
-      display: flex;
-      align-items: center;
-    }
-
-    .slider--btn {
-      --size: 40px;
-
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0.7;
-      transition: opacity 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
-      z-index: 999;
-
-      & svg {
-        width: var(--size);
-        height: var(--size);
-        stroke: white;
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .slides__wrapper {
-      width: 100%;
-      height: 100%;
-
-      display: grid;
-      place-items: center;
-
-      & > * {
-        grid-area: 1 / -1;
-      }
-    }
-
-    .slides,
-    .slides--infos {
-      width: 100%;
-      height: 100%;
-
+    [type="checkbox"]:checked,
+    [type="checkbox"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
       pointer-events: none;
-
-      display: grid;
-      place-items: center;
-      & > * {
-        grid-area: 1 / -1;
-      }
+    }
+    .dark-light:checked + label,
+    .dark-light:not(:checked) + label {
+      position: fixed;
+      top: 40px;
+      right: 40px;
+      z-index: 20000;
+      display: block;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      cursor: pointer;
+      transition: all 200ms linear;
+      box-shadow: 0 0 25px rgba(255, 235, 167, 0.45);
+    }
+    .dark-light:checked + label {
+      transform: rotate(360deg);
+    }
+    .dark-light:checked + label:after,
+    .dark-light:not(:checked) + label:after {
+      position: absolute;
+      content: "";
+      top: 1px;
+      left: 1px;
+      overflow: hidden;
+      z-index: 2;
+      display: block;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      background-color: #102770;
+      background-image: url("https://assets.codepen.io/1462889/moon.svg");
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 200ms linear;
+      opacity: 0;
+    }
+    .dark-light:checked + label:after {
+      opacity: 1;
+    }
+    .dark-light:checked + label:before,
+    .dark-light:not(:checked) + label:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 1;
+      display: block;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      background-color: #48dbfb;
+      background-image: url("https://assets.codepen.io/1462889/sun.svg");
+      background-size: 25px 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 200ms linear;
+    }
+    .dark-light:checked + label:before {
+      background-color: #000;
     }
 
-    /* ------------------------------------------------ */
-    /* -------------------- SLIDE --------------------- */
-    /* ------------------------------------------------ */
-
-    .slide {
-      --slide-tx: 0px;
-      --slide-ty: 0vh;
-      --padding: 0px;
-      --offset: 0;
-
-      width: var(--slide-width);
-      height: auto;
-      aspect-ratio: var(--slide-aspect);
-      user-select: none;
-      perspective: 800px;
-
-      transform: perspective(1000px)
-        translate3d(var(--slide-tx), var(--slide-ty), var(--slide-tz, 0))
-        rotateY(var(--slide-rotY)) scale(var(--slide-scale));
-      transition: transform var(--slide-transition-duration)
-        var(--slide-transition-easing);
+    .dark-light:checked ~ .sec-center .for-dropdown {
+      background-color: #102770;
+      color: #ffeba7;
+      box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
     }
-
-    .slide[data-current] {
-      --slide-scale: 1.2;
-      --slide-tz: 0px;
-      --slide-tx: 0px;
-      --slide-rotY: 0;
-
+    .dropdown:checked + label:before,
+    .dropdown:not(:checked) + label:before {
+      position: fixed;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      cursor: auto;
+      pointer-events: none;
+    }
+    .dropdown:checked + label:before {
       pointer-events: auto;
     }
-
-    .slide[data-next] {
-      --slide-tx: calc(1 * var(--slide-width) * 1.07);
-      --slide-rotY: -45deg;
+    .dropdown:not(:checked) + label .uil {
+      font-size: 24px;
+      margin-left: 10px;
+      transition: transform 200ms linear;
     }
-
-    .slide[data-previous] {
-      --slide-tx: calc(-1 * var(--slide-width) * 1.07);
-      --slide-rotY: 45deg;
+    .dropdown:checked + label .uil {
+      transform: rotate(180deg);
+      font-size: 24px;
+      margin-left: 10px;
+      transition: transform 200ms linear;
     }
-
-    .slide:not([data-current]) {
-      --slide-scale: 1;
-      --slide-tz: 0;
-      /* --slide-tx: calc(var(--offset) * var(--slide-width) * 1.05); */
-      /* --slide-rotY: calc(var(--dir) * -45deg); */
-
-      pointer-events: none;
-    }
-
-    .slide[data-current] {
-      & .slide--image {
-        filter: brightness(0.8);
-      }
-    }
-
-    .slide:not([data-current]) {
-      & .slide--image {
-        filter: brightness(0.5);
-      }
-    }
-
-    .slide__inner {
-      --rotX: 0;
-      --rotY: 0;
-      --bgPosX: 0%;
-      --bgPosY: 0%;
-
-      position: relative;
-      left: calc(var(--padding) / 2);
-      top: calc(var(--padding) / 2);
-      width: calc(100% - var(--padding));
-      height: calc(100% - var(--padding));
-      transform-style: preserve-3d;
-      transform: rotateX(var(--rotX)) rotateY(var(--rotY));
-    }
-
-    .slide--image__wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .slide--image {
-      width: 100%;
-      height: 100%;
+    .section-dropdown {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      object-fit: cover;
-      transform: translate(-50%, -50%) scale(1.25)
-        translate3d(var(--bgPosX), var(--bgPosY), 0);
-      transition: filter var(--slide-transition-duration)
-        var(--slide-transition-easing);
-    }
-
-    .slide__bg {
-      position: fixed;
-      inset: -20%;
-      background-image: var(--bg);
-      background-size: cover;
-      background-position: center center;
-
-      z-index: -1;
-      pointer-events: none;
-
-      transition: opacity var(--slide-transition-duration) ease,
-        transform var(--slide-transition-duration) ease;
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-      }
-
-      &::before {
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(8px);
-      }
-
-      &:not([data-current]) {
-        opacity: 0;
-      }
-
-      &[data-previous] {
-        transform: translateX(-10%);
-      }
-
-      &[data-next] {
-        transform: translateX(10%);
-      }
-    }
-
-    /* ------------ SLIDE INFO ---------------- */
-
-    .slide-info {
-      --padding: 0px;
-
-      position: relative;
-      width: var(--slide-width);
-      height: 100%;
-      aspect-ratio: var(--slide-aspect);
-      user-select: none;
-      perspective: 800px;
-      z-index: 100;
-    }
-
-    .slide-info[data-current] {
-      & .slide-info--text span {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-        transition-delay: 250ms;
-      }
-    }
-
-    .slide-info:not([data-current]) {
-      & .slide-info--text span {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-        transition-delay: 0ms;
-      }
-    }
-
-    .slide-info__inner {
-      position: relative;
-      left: calc(var(--padding) / 2);
-      top: calc(var(--padding) / 2);
-      width: calc(100% - var(--padding));
-      height: calc(100% - var(--padding));
-      transform-style: preserve-3d;
-      transform: rotateX(var(--rotX)) rotateY(var(--rotY));
-    }
-
-    .slide-info--text__wrapper {
-      --z-offset: 45px;
-
-      position: absolute;
-      height: fit-content;
-      left: -15%;
-      bottom: 15%;
-      transform: translateZ(var(--z-offset));
+      padding: 5px;
+      background-color: #111;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
       z-index: 2;
+      opacity: 0;
       pointer-events: none;
+      transform: translateY(20px);
+      transition: all 200ms linear;
     }
-
-    .slide-info--text {
-      font-family: var(--font-clash-display);
-      color: #fff;
-      overflow: hidden;
-
-      & span {
-        display: block;
-        white-space: nowrap;
-        transition: var(--slide-transition-duration)
-          var(--slide-transition-easing);
-        transition-property: opacity, transform;
-      }
-
-      &[data-title],
-      &[data-subtitle] {
-        font-size: min(3cqw, 2.4rem);
-        font-weight: 800;
-        letter-spacing: 0.2cqw;
-        white-space: nowrap;
-        text-transform: uppercase;
-      }
-
-      &[data-subtitle] {
-        margin-left: 2cqw;
-        font-size: min(2.2cqw, 1.8rem);
-        font-weight: 600;
-      }
-
-      &[data-description] {
-        margin-left: 1cqw;
-        font-size: min(1.5cqw, 0.95rem);
-        font-family: var(--font-archivo);
-        font-weight: 300;
-      }
+    .dark-light:checked ~ .sec-center .section-dropdown {
+      background-color: #fff;
+      box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.15);
     }
-
-    /* ------------------------------------------------ */
-    /* -------------------- LOADER --------------------- */
-    /* ------------------------------------------------ */
-
-    .loader {
-      position: fixed;
-      inset: 0;
-
-      display: grid;
-      place-items: center;
-
-      background: #000;
-      z-index: 1000;
-
+    .dropdown:checked ~ .section-dropdown {
       opacity: 1;
-      transition: opacity 0.5s ease-out;
-
-      .loader__text {
-        font-family: var(--font-clash-display);
-        font-size: clamp(2rem, 2vw, 5rem);
-        font-weight: 800;
-        color: #fff;
-      }
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .section-dropdown:before {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      content: "";
+      display: block;
+      z-index: 1;
+    }
+    .section-dropdown:after {
+      position: absolute;
+      top: -7px;
+      left: 30px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #111;
+      content: "";
+      display: block;
+      z-index: 2;
+      transition: all 200ms linear;
+    }
+    .dark-light:checked ~ .sec-center .section-dropdown:after {
+      border-bottom: 8px solid #fff;
     }
 
-    /* ------------------------------------------- */
-
-    .support {
-      position: absolute;
-      right: 10px;
-      bottom: 10px;
-      padding: 10px;
+    a {
+      position: relative;
+      color: #fff;
+      transition: all 200ms linear;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      border-radius: 2px;
+      padding: 5px 0;
+      padding-left: 20px;
+      padding-right: 15px;
+      margin: 2px 0;
+      text-align: left;
+      text-decoration: none;
+      display: -ms-flexbox;
       display: flex;
-      a {
-        margin: 0 10px;
-        color: #fff;
-        font-size: 1.8rem;
-        backface-visibility: hidden;
-        transition: all 150ms ease;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      justify-content: space-between;
+      -ms-flex-pack: distribute;
+    }
+    .dark-light:checked ~ .sec-center .section-dropdown a {
+      color: #102770;
+    }
+    a:hover {
+      color: #102770;
+      background-color: #ffeba7;
+    }
+    .dark-light:checked ~ .sec-center .section-dropdown a:hover {
+      color: #ffeba7;
+      background-color: #102770;
+    }
+    a .uil {
+      font-size: 22px;
+    }
+    .dropdown-sub:checked + label,
+    .dropdown-sub:not(:checked) + label {
+      position: relative;
+      color: #fff;
+      transition: all 200ms linear;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      border-radius: 2px;
+      padding: 5px 0;
+      padding-left: 20px;
+      padding-right: 15px;
+      text-align: left;
+      text-decoration: none;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      justify-content: space-between;
+      -ms-flex-pack: distribute;
+      cursor: pointer;
+    }
+    .dropdown-sub:checked + label .uil,
+    .dropdown-sub:not(:checked) + label .uil {
+      font-size: 22px;
+    }
+    .dropdown-sub:not(:checked) + label .uil {
+      transition: transform 200ms linear;
+    }
+    .dropdown-sub:checked + label .uil {
+      transform: rotate(135deg);
+      transition: transform 200ms linear;
+    }
+    .dropdown-sub:checked + label:hover,
+    .dropdown-sub:not(:checked) + label:hover {
+      color: #102770;
+      background-color: #ffeba7;
+    }
+
+    .section-dropdown-sub {
+      position: relative;
+      display: block;
+      width: 100%;
+      pointer-events: none;
+      opacity: 0;
+      max-height: 0;
+      padding-left: 10px;
+      padding-right: 3px;
+      overflow: hidden;
+      transition: all 200ms linear;
+    }
+    .dropdown-sub:checked ~ .section-dropdown-sub {
+      pointer-events: auto;
+      opacity: 1;
+      max-height: 999px;
+    }
+    .section-dropdown-sub a {
+      font-size: 14px;
+    }
+    .section-dropdown-sub a .uil {
+      font-size: 20px;
     }
   </style>
   <body>
-    <div class="slider">
-      <button class="slider--btn slider--btn__prev">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="m15 18-6-6 6-6" />
-        </svg>
-      </button>
-
-      <div class="slides__wrapper">
-        <div class="slides">
-          <!-- slide 1 -->
-          <div class="slide" data-current>
-            <div class="slide__inner">
-              <div class="slide--image__wrapper">
-                <img
-                  class="slide--image"
-                  src="https://devloop01.github.io/voyage-slider/images/scotland-mountains.jpg"
-                  alt="Image 1"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="slide__bg"
-            style="
-              --bg: url(https://devloop01.github.io/voyage-slider/images/scotland-mountains.jpg);
-              --dir: 0;
-            "
-            data-current
-          ></div>
-
-          <!-- slide 2 -->
-          <div class="slide" data-next>
-            <div class="slide__inner">
-              <div class="slide--image__wrapper">
-                <img
-                  class="slide--image"
-                  src="
-    https://devloop01.github.io/voyage-slider/images/machu-pichu.jpg"
-                  alt="Image 2"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="slide__bg"
-            style="
-              --bg: url(https://devloop01.github.io/voyage-slider/images/machu-pichu.jpg);
-              --dir: 1;
-            "
-            data-next
-          ></div>
-
-          <!-- slide 3 -->
-          <div class="slide" data-previous>
-            <div class="slide__inner">
-              <div class="slide--image__wrapper">
-                <img
-                  class="slide--image"
-                  src="https://devloop01.github.io/voyage-slider/images/chamonix.jpg"
-                  alt="Image 3"
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            class="slide__bg"
-            style="
-              --bg: url(https://devloop01.github.io/voyage-slider/images/chamonix.jpg);
-              --dir: -1;
-            "
-            data-previous
-          ></div>
+    <div class="sec-center">
+      <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
+      <label class="for-dropdown" for="dropdown"
+        >Dropdown Menu <i class="uil uil-arrow-down"></i
+      ></label>
+      <div class="section-dropdown">
+        <a href="#">Dropdown Link <i class="uil uil-arrow-right"></i></a>
+        <input
+          class="dropdown-sub"
+          type="checkbox"
+          id="dropdown-sub"
+          name="dropdown-sub"
+        />
+        <label class="for-dropdown-sub" for="dropdown-sub"
+          >Dropdown Sub <i class="uil uil-plus"></i
+        ></label>
+        <div class="section-dropdown-sub">
+          <a href="#">Dropdown Link <i class="uil uil-arrow-right"></i></a>
+          <a href="#">Dropdown Link <i class="uil uil-arrow-right"></i></a>
         </div>
-        <div class="slides--infos">
-          <!-- Slide Info 1 -->
-          <div class="slide-info" data-current>
-            <div class="slide-info__inner">
-              <div class="slide-info--text__wrapper">
-                <div data-title class="slide-info--text">
-                  <span>Highlands</span>
-                </div>
-                <div data-subtitle class="slide-info--text">
-                  <span>Scotland</span>
-                </div>
-                <div data-description class="slide-info--text">
-                  <span>The mountains are calling</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide Info 2 -->
-          <div class="slide-info" data-next>
-            <div class="slide-info__inner">
-              <div class="slide-info--text__wrapper">
-                <div data-title class="slide-info--text">
-                  <span>Machu Pichu</span>
-                </div>
-                <div data-subtitle class="slide-info--text">
-                  <span>Peru</span>
-                </div>
-                <div data-description class="slide-info--text">
-                  <span>Adventure is never far away</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide Info 3 -->
-          <div class="slide-info" data-previous>
-            <div class="slide-info__inner">
-              <div class="slide-info--text__wrapper">
-                <div data-title class="slide-info--text">
-                  <span>Chamonix</span>
-                </div>
-                <div data-subtitle class="slide-info--text">
-                  <span>France</span>
-                </div>
-                <div data-description class="slide-info--text">
-                  <span>Let your dreams come true</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <a href="#">Dropdown Link <i class="uil uil-arrow-right"></i></a>
+        <a href="#">Dropdown Link <i class="uil uil-arrow-right"></i></a>
       </div>
-
-      <button class="slider--btn slider--btn__next">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="m9 18 6-6-6-6" />
-        </svg>
-      </button>
     </div>
-
-    <script>
-      import imagesLoaded from "https://esm.sh/imagesloaded";
-
-      console.clear();
-
-      // -------------------------------------------------
-      // ------------------ Utilities --------------------
-      // -------------------------------------------------
-
-      // Math utilities
-      const wrap = (n, max) => (n + max) % max;
-      const lerp = (a, b, t) => a + (b - a) * t;
-
-      // DOM utilities
-      const isHTMLElement = (el) => el instanceof HTMLElement;
-
-      const genId = (() => {
-        let count = 0;
-        return () => {
-          return (count++).toString();
-        };
-      })();
-
-      class Raf {
-        constructor() {
-          this.rafId = 0;
-          this.raf = this.raf.bind(this);
-          this.callbacks = [];
-
-          this.start();
-        }
-
-        start() {
-          this.raf();
-        }
-
-        stop() {
-          cancelAnimationFrame(this.rafId);
-        }
-
-        raf() {
-          this.callbacks.forEach(({ callback, id }) => callback({ id }));
-          this.rafId = requestAnimationFrame(this.raf);
-        }
-
-        add(callback, id) {
-          this.callbacks.push({ callback, id: id || genId() });
-        }
-
-        remove(id) {
-          this.callbacks = this.callbacks.filter(
-            (callback) => callback.id !== id
-          );
-        }
-      }
-
-      class Vec2 {
-        constructor(x = 0, y = 0) {
-          this.x = x;
-          this.y = y;
-        }
-
-        set(x, y) {
-          this.x = x;
-          this.y = y;
-        }
-
-        lerp(v, t) {
-          this.x = lerp(this.x, v.x, t);
-          this.y = lerp(this.y, v.y, t);
-        }
-      }
-
-      const vec2 = (x = 0, y = 0) => new Vec2(x, y);
-
-      export function tilt(node, options) {
-        let { trigger, target } = resolveOptions(node, options);
-
-        let lerpAmount = 0.06;
-
-        const rotDeg = { current: vec2(), target: vec2() };
-        const bgPos = { current: vec2(), target: vec2() };
-
-        const update = (newOptions) => {
-          destroy();
-          ({ trigger, target } = resolveOptions(node, newOptions));
-          init();
-        };
-
-        let rafId;
-
-        function ticker({ id }) {
-          rafId = id;
-
-          rotDeg.current.lerp(rotDeg.target, lerpAmount);
-          bgPos.current.lerp(bgPos.target, lerpAmount);
-
-          for (const el of target) {
-            el.style.setProperty("--rotX", rotDeg.current.y.toFixed(2) + "deg");
-            el.style.setProperty("--rotY", rotDeg.current.x.toFixed(2) + "deg");
-
-            el.style.setProperty("--bgPosX", bgPos.current.x.toFixed(2) + "%");
-            el.style.setProperty("--bgPosY", bgPos.current.y.toFixed(2) + "%");
-          }
-        }
-
-        const onMouseMove = ({ offsetX, offsetY }) => {
-          lerpAmount = 0.1;
-
-          for (const el of target) {
-            const ox = (offsetX - el.clientWidth * 0.5) / (Math.PI * 3);
-            const oy = -(offsetY - el.clientHeight * 0.5) / (Math.PI * 4);
-
-            rotDeg.target.set(ox, oy);
-            bgPos.target.set(-ox * 0.3, oy * 0.3);
-          }
-        };
-
-        const onMouseLeave = () => {
-          lerpAmount = 0.06;
-
-          rotDeg.target.set(0, 0);
-          bgPos.target.set(0, 0);
-        };
-
-        const addListeners = () => {
-          trigger.addEventListener("mousemove", onMouseMove);
-          trigger.addEventListener("mouseleave", onMouseLeave);
-        };
-
-        const removeListeners = () => {
-          trigger.removeEventListener("mousemove", onMouseMove);
-          trigger.removeEventListener("mouseleave", onMouseLeave);
-        };
-
-        const init = () => {
-          addListeners();
-          raf.add(ticker);
-        };
-
-        const destroy = () => {
-          removeListeners();
-          raf.remove(rafId);
-        };
-
-        init();
-
-        return { destroy, update };
-      }
-
-      function resolveOptions(node, options) {
-        return {
-          trigger: options?.trigger ?? node,
-          target: options?.target
-            ? Array.isArray(options.target)
-              ? options.target
-              : [options.target]
-            : [node],
-        };
-      }
-
-      // -----------------------------------------------------
-
-      // Global Raf Instance
-      const raf = new Raf();
-
-      function init() {
-        const loader = document.querySelector(".loader");
-
-        const slides = [...document.querySelectorAll(".slide")];
-        const slidesInfo = [...document.querySelectorAll(".slide-info")];
-
-        const buttons = {
-          prev: document.querySelector(".slider--btn__prev"),
-          next: document.querySelector(".slider--btn__next"),
-        };
-
-        loader.style.opacity = 0;
-        loader.style.pointerEvents = "none";
-
-        slides.forEach((slide, i) => {
-          const slideInner = slide.querySelector(".slide__inner");
-          const slideInfoInner =
-            slidesInfo[i].querySelector(".slide-info__inner");
-
-          tilt(slide, { target: [slideInner, slideInfoInner] });
-        });
-
-        buttons.prev.addEventListener("click", change(-1));
-        buttons.next.addEventListener("click", change(1));
-      }
-
-      function setup() {
-        const loaderText = document.querySelector(".loader__text");
-
-        const images = [...document.querySelectorAll("img")];
-        const totalImages = images.length;
-        let loadedImages = 0;
-        let progress = {
-          current: 0,
-          target: 0,
-        };
-
-        // Directly call init to skip loader
-        init();
-      }
-
-      function change(direction) {
-        return () => {
-          let current = {
-            slide: document.querySelector(".slide[data-current]"),
-            slideInfo: document.querySelector(".slide-info[data-current]"),
-            slideBg: document.querySelector(".slide__bg[data-current]"),
-          };
-          let previous = {
-            slide: document.querySelector(".slide[data-previous]"),
-            slideInfo: document.querySelector(".slide-info[data-previous]"),
-            slideBg: document.querySelector(".slide__bg[data-previous]"),
-          };
-          let next = {
-            slide: document.querySelector(".slide[data-next]"),
-            slideInfo: document.querySelector(".slide-info[data-next]"),
-            slideBg: document.querySelector(".slide__bg[data-next]"),
-          };
-
-          Object.values(current).map((el) =>
-            el.removeAttribute("data-current")
-          );
-          Object.values(previous).map((el) =>
-            el.removeAttribute("data-previous")
-          );
-          Object.values(next).map((el) => el.removeAttribute("data-next"));
-
-          if (direction === 1) {
-            let temp = current;
-            current = next;
-            next = previous;
-            previous = temp;
-
-            current.slide.style.zIndex = "20";
-            previous.slide.style.zIndex = "30";
-            next.slide.style.zIndex = "10";
-          } else if (direction === -1) {
-            let temp = current;
-            current = previous;
-            previous = next;
-            next = temp;
-
-            current.slide.style.zIndex = "20";
-            previous.slide.style.zIndex = "10";
-            next.slide.style.zIndex = "30";
-          }
-
-          Object.values(current).map((el) =>
-            el.setAttribute("data-current", "")
-          );
-          Object.values(previous).map((el) =>
-            el.setAttribute("data-previous", "")
-          );
-          Object.values(next).map((el) => el.setAttribute("data-next", ""));
-        };
-      }
-
-      // Start
-      setup();
-    </script>
   </body>
 </html>

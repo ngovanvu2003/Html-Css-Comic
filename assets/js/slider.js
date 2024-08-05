@@ -6,8 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const arrows = container.querySelectorAll(`.${arrowClass}`);
     const dots = container.querySelectorAll(".cascade-slider_dot");
     const itemCount = items.length;
-
     let currentIndex = 0;
+
+    // const cascadeElement = document.getElementById("cascade");
+    // if (container.querySelectorAll(`.${itemClass}`)) {
+    //   for (let i = 0; i < itemCount; i++) {
+    //     const li = document.createElement("li");
+    //     li.classList.add("cascade-slider_dot");
+    //     if (i === 0) {
+    //       li.classList.add("cur"); // Thêm class 'cur' cho phần tử đầu tiên
+    //     }
+    //     cascadeElement.appendChild(li); // Thêm phần tử <li> vào phần tử với id 'cascade'
+    //   }
+    // }
 
     function changeIndex(newIndex) {
       items.forEach((item, index) => {
