@@ -57,6 +57,11 @@ a , i , button {
   cursor: pointer;
 }
 
+.flex{
+  display: flex;
+  justify-items: center;
+}
+
 /*----- Header ----- */
 /* header {
   border-bottom: 1px solid #f0f0f0;

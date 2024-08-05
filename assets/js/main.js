@@ -8,6 +8,7 @@ themeToggler.onclick = () => {
     document.body.classList.remove("active");
   }
 };
+
 document.addEventListener("DOMContentLoaded", function () {
   const themeToggler = document.querySelector("#on-search");
   const content = document.querySelector("#content-search");
