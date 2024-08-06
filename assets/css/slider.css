@@ -63,8 +63,8 @@
 }
 .cascade-slider_dot {
   display: inline-block;
-  width: 17px;
-  height: 8px;
+  width: 16px;
+  height: 12px;
   border: 1px solid #bf2c24;
   margin: 3px;
   transition: all 0.5s;
@@ -78,15 +78,16 @@
 }
 .cascade-slider_dot.cur {
   background: #bf2c24;
-  width: 18px;
-  height: 9px;
+  width: 17px;
+  height: 13px;
 }
 
 /*Profile card classes*/
+
 .card {
   background-color: #fff;
   color: #bf2c24;
-  width: 550px;
+  width: 480px;
   height: 200px;
   border-radius: 20px;
   transition: all 1s 0s;
@@ -100,7 +101,10 @@
 }
 .photo img {
   transform: translateY(-35px) translateX(-10px);
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  border-radius: 10px;
+  box-shadow: -2px 1px 4px 0px #7f818e;
+  transition: 0.3s ease;
 }
 .info {
   display: inline-block;
@@ -138,6 +142,12 @@
   }
 }
 @media (max-width: 460px) {
+  .cascade-slider_container {
+    height: 350px;
+  }
+  .cascade-slider_nav {
+    bottom: 5px;
+  }
   .info h2 {
     font-size: 22px;
   }

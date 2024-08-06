@@ -8,18 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const itemCount = items.length;
     let currentIndex = 0;
 
-    // const cascadeElement = document.getElementById("cascade");
-    // if (container.querySelectorAll(`.${itemClass}`)) {
-    //   for (let i = 0; i < itemCount; i++) {
-    //     const li = document.createElement("li");
-    //     li.classList.add("cascade-slider_dot");
-    //     if (i === 0) {
-    //       li.classList.add("cur"); // Thêm class 'cur' cho phần tử đầu tiên
-    //     }
-    //     cascadeElement.appendChild(li); // Thêm phần tử <li> vào phần tử với id 'cascade'
-    //   }
-    // }
-
     function changeIndex(newIndex) {
       items.forEach((item, index) => {
         item.classList.remove("now", "prev", "next");
@@ -75,8 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     changeIndex(currentIndex);
     updateDots();
 
-    // Tự động chuyển slide sau mỗi 5 giây
-    setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 8000);
   }
 
   const slider = document.getElementById("cascade-slider");
@@ -85,3 +72,15 @@ document.addEventListener("DOMContentLoaded", function () {
     arrowClass: "cascade-slider_arrow",
   });
 });
+
+// const cascadeElement = document.getElementById("cascade");
+// if (container.querySelectorAll(`.${itemClass}`)) {
+//   for (let i = 0; i < itemCount; i++) {
+//     const li = document.createElement("li");
+//     li.classList.add("cascade-slider_dot");
+//     if (i === 0) {
+//       li.classList.add("cur"); // Thêm class 'cur' cho phần tử đầu tiên
+//     }
+//     cascadeElement.appendChild(li); // Thêm phần tử <li> vào phần tử với id 'cascade'
+//   }
+// }
