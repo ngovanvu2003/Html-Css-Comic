@@ -290,10 +290,10 @@ footer .about-us p {
     flex-wrap: wrap;
   }
   .logo h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .logo span {
-    font-size: 30px;
+    font-size: 28px;
   }
   .btn {
     font-size: 13px;
@@ -303,6 +303,12 @@ footer .about-us p {
     gap: 20px;
   }
 }
+@media (max-width: 390px) {
+  .header-main {
+    justify-content: space-around;
+  }
+}
+
 #loading-screen {
   position: fixed;
   top: 0;
