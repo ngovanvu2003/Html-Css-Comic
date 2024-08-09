@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(nextSlide, 8000);
   }
-
   const slider = document.getElementById("cascade-slider");
   cascadeSlider(slider, {
     itemClass: "cascade-slider_item",

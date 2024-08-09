@@ -28,6 +28,7 @@ Prefix class:
   flex-wrap: wrap;
   /* margin-left: -4px;
   margin-right: -4px; */
+  /* align-items: center; */
 }
 
 .row.no-gutters {

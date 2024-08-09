@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Navigation Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .tab-container {
+        display: flex;
+        border-bottom: 2px solid #ddd;
+      }
+      .tab {
+        display: flex;
+        cursor: pointer;
+        padding: 15px;
+
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+      }
+
+      .tab:hover {
+        background-color: #ddd;
+      }
+
+      .tab.active-detail {
+        background-color: #fff;
+        border-bottom: 2px solid red;
+      }
+
+      .content {
+        padding: 15px;
+        display: none;
+      }
+
+      .content.active-detail {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab-container">
+        <div class="tab active-detail" id="info-tab">Thông Tin Truyện</div>
+        <div class="tab" id="contents-tab">Mục Lục</div>
+      </div>
+      <div class="content active-detail" id="info-content">
+        <h2>Thông Tin Truyện</h2>
+        <p>Đây là phần thông tin về truyện.</p>
+        <p>Thêm mô tả chi tiết về truyện ở đây.</p>
+      </div>
+      <div class="content" id="contents-content">
+        <h2>Mục Lục</h2>
+        <ul>
+          <li><a href="#chapter1">Chương 1: Khởi đầu</a></li>
+          <li><a href="#chapter2">Chương 2: Cuộc gặp gỡ</a></li>
+          <li><a href="#chapter3">Chương 3: Cuộc phiêu lưu</a></li>
+          <!-- Thêm các chương khác tại đây -->
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Chọn các phần tử tab và nội dung
+      const tabs = document.querySelectorAll(".tab");
+      const contents = document.querySelectorAll(".content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          tabs.forEach((t) => t.classList.remove("active-detail"));
+          contents.forEach((c) => c.classList.remove("active-detail"));
+
+          tab.classList.add("active-detail");
+          document
+            .getElementById(tab.id.replace("-tab", "-content"))
+            .classList.add("active-detail");
+        });
+      });
+    </script>
+  </body>
+</html>

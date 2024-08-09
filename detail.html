@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đọc truyện online</title>
+    <!-- Link Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- import icon font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/css/gird.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/slider.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="grid wide">
+        <div class="row header-main">
+          <!-- Logo -->
+          <div class="logo">
+            <h1><span>T</span>ruyen Chu</h1>
+            <!-- Form Search -->
+          </div>
+          <div id="overlay"></div>
+          <div class="main-search">
+            <form class="form-search">
+              <input type="search" placeholder="Nhập từ khóa tìm kiếm" />
+              <button type="btn submit">Tìm kiếm</button>
+            </form>
+          </div>
+
+          <div class="row account">
+            <!-- Form Search MB -->
+            <div class="form-search-mb">
+              <i id="on-search" class="fas fa-search"></i>
+            </div>
+
+            <!-- Account -->
+            <div id="theme-toggler" class="fas fa-moon"></div>
+            <div class="btn login">Đăng nhập</div>
+            <div class="btn register">Đăng ký</div>
+
+            <div class="dropdown">
+              <button id="myButton" class="dropbtn">Tài khoản</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Đăng nhập</a>
+                <a href="#about">Đăng ký</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="content-search">
+        <form class="form-search">
+          <input type="search" placeholder="Nhập từ khóa tìm kiếm" />
+          <button type="btn submit">Tìm kiếm</button>
+        </form>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Menu -->
+    <nav class="main-nav">
+      <div class="grid wide">
+        <div class="row main-nav-content">
+          <div class="genres">
+            <a href="#" class="toggle-genres"
+              ><i class="fas fa-bars"></i>
+
+              Thể loại
+            </a>
+          </div>
+          <div class="sort-dropdown">
+            <ul>
+              <li><a href="#">Truyện đẫu</a></li>
+              <li><a href="#">Truyện sau</a></li>
+              <li><a href="#">Truyện màu</a></li>
+              <li><a href="#">Truyện sau</a></li>
+              <li><a href="#">Truyện màu</a></li>
+            </ul>
+          </div>
+          <div class="filter">
+            <a href="#" class=""
+              ><i class="fas fa-ballot"></i>
+              Tất cả truyện
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="grid wide">
+        <div class="row breadcrumbs">
+          <div class="flex  breadcrumbs-item">
+            <div class="flex">
+              <a href="">Trang chủ</a>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="flex breadcrumbs-item">
+              <a href="">Ba lần gặp gỡ là định mệnh</a>
+            </div>
+          </div>
+        </div>
+        <div class="row story-detail">
+          <div class="col l-3  m-6 c-12 ">
+            <div class="book">
+                <div class="book-effect">
+                    <img
+                      src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                      alt="Ảnh giống quyển sách"
+                    />
+                    <div class="page-book">
+                      <img src="./bookpattren.png" alt="" />
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="col l-6 m-6 c-12 info-story">
+       
+                <h1>Ta làm chị dâu của nam chính</h1>
+            <div>
+                <span class="author">Tác giả : Cửu nguyệt lưu hoả</span>
+   
+                <p class="publication-date">Xuất bản ngày 04/06/2024</p>
+            </div>
+                <div class="info-genres">
+                  <button>Đang ra</button>
+                  <button>Vip</button>
+                  <button>hài Hước</button>
+                  <button>Kiếm hiệp</button>
+                </div>
+                <div class="">
+                    <span>82 chương</span> | <span>5,459 lượt xem</span> |
+                    <span>20 đánh giá</span>
+  
+                  </div>
+                <div class="star-rating" id="star-rating" data-value="4.5">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+
+                </div>
+                
+
+
+                <div class="btn-read">
+                  <button class="btn-r-a">Đọc thử miễn phí</button>
+                  <button class="btn-r-a">Thêm vào giá sách</button>
+                </div>
+        </div>
+
+        <div class="col  l-3 m-12  c-12 list-genre">
+            <h2>
+                Thể loại truyện
+            </h2>
+            <div class="row">
+                <div class="col l-6 m-6 c-6 genre">
+                   <a href=""> truyện tranh</a>
+                </div>
+                <div class="col l-6 m-6 c-6 genre">
+                   <a href=""> truyện tranh</a>
+                </div>
+                <div class="col l-6 m-6 c-6 genre">
+                   <a href=""> truyện tranh</a>
+                </div>
+                <div class="col l-6 m-6 c-6 genre">
+                   <a href=""> truyện tranh</a>
+                </div>
+                <div class="col l-6 m-6 c-6 genre">
+                   <a href=""> truyện tranh</a>
+                </div>
+                <div class="col l-6 m-6 c-6 genre">
+                   <a href=""> truyện tranh</a>
+                </div>
+                
+            </div>
+        </div>
+
+        </div>
+        <div class="container">
+            <div class="tab-container">
+              <div class="tab active-detail" id="info-tab">Thông Tin Truyện</div>
+              <div class="tab" id="contents-tab">Mục Lục</div>
+            </div>
+            <div class="content active-detail" id="info-content">
+              <p>Sẽ như thế nào nếu như người mà bạn coi là bạn thân lại thích thầm mình bao nhiêu lâu nay?
+
+
+                Trịnh Mỹ Châu vô cùng bất ngờ vì chuyện này, nhưng cũng không giấu nổi sự vui mừng. 
+                
+                
+                Tình cờ, cô có quen biết với Hạ Vu Quân, ảnh đế đang vô cùng nổi tiếng hiện giờ trong hoàn cảnh vô cùng trớ trêu, đó là vào đám cưới người yêu cũ. Cô từ một nữ diễn viên tuyến 18 vô danh bật lên thành sao hạng A nhờ khả năng diễn xuất chân thực, tự nhiên của mình, chỉ tiếc thay lại không thuận lợi trong tình yêu lẫn cả gia đình. 
+                
+                
+                Mồ côi từ nhỏ, phải nỗ lực rất nhiều mới có được thành công ngày hôm nay. Trịnh Mỹ Châu đã trải qua rất nhiều khó khăn gian khổ khi chật vật trên con đường diễn xuất. May mắn là những nỗ lực ấy đều đã được đền đáp. 
+                
+                
+                Bây giờ, Hạ Vu Quân ở bên cạnh cô, cho cô cảm giác an toàn, những lúc Trịnh Mỹ Châu khó khăn nhất đều là anh ở bên cạnh cô. Thậm chí vì cô mà Hạ ảnh đế sẵn sàng đóng phim thần tượng. 
+                
+                
+                Tình yêu anh dành cho cô bình dị nhưng lại sâu nặng, anh yêu Trịnh Mỹ Châu còn hơn cả sinh mạng. 
+                
+                
+                Ngày cưới cô, Hạ Vu Quân trịnh trọng nói: "Châu Châu, được gặp em, kết hôn cùng em là điều may mắn nhất trong cuộc đời anh! Anh nhất định sẽ mang đến hạnh phúc cho em, hãy cứ yên tâm giao quãng đời sau này lại cho anh!"
+                
+                
+                Đáp lại tâm ý ấy, Trịnh Mỹ Châu cũng thẳng thắn nói với anh: "Vu Quân, cuộc đời này, anh chính là niềm tự hào của em."</p>
+            </div>
+            <div class="content" id="contents-content">
+              <ul class="row">
+                <li class="col l-4 m-4 c-12"><a href="#chapter1">Chương 1: Khởi đầu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter2">Chương 2: Cuộc gặp gỡ</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter3">Chương 3: Cuộc phiêu lưu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter1">Chương 1: Khởi đầu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter2">Chương 2: Cuộc gặp gỡ</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter3">Chương 3: Cuộc phiêu lưu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter1">Chương 1: Khởi đầu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter2">Chương 2: Cuộc gặp gỡ</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter3">Chương 3: Cuộc phiêu lưu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter1">Chương 1: Khởi đầu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter2">Chương 2: Cuộc gặp gỡ</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter3">Chương 3: Cuộc phiêu lưu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter1">Chương 1: Khởi đầu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter2">Chương 2: Cuộc gặp gỡ</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter3">Chương 3: Cuộc phiêu lưu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter1">Chương 1: Khởi đầu</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter2">Chương 2: Cuộc gặp gỡ</a></li>
+                <li class="col l-4 m-4 c-12"><a href="#chapter3">Chương 3: Cuộc phiêu lưu</a></li>
+
+         
+              </ul>
+            </div>
+            <div class="story-main ">
+                <h2 class="">
+                    <a title="Truyện Hot"  href="">Gợi ý cho bạn</a>
+                </h2>
+           
+            <div class="story-grid">
+                <div class="row hot-list">
+                    <div class="col l-2 m-3 c-4 story-item">
+                        <a href="">
+                         <img src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg" alt="Ta làm chị dâu của nam chính" class="img-fluid" width="150" height="230" loading="lazy">
+                        </a>
+                        <div class="card-title">
+                            <div class="card-item">
+                                <p class="card-green">Full</p>
+                            </div>  
+                        </div>
+                        <div class="name-comic">
+                            <h1>Ta làm chị dâu nam chính </h1>
+                        </div>
+                    </div>
+                    <div class="col l-2 m-3 c-4 story-item">
+                        <a href="">
+                         <img src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg" alt="Ta làm chị dâu của nam chính" class="img-fluid" width="150" height="230" loading="lazy">
+                        </a>
+                        <div class="card-title">
+                            <div class="card-item">
+                                <p class="card-green">Full</p>
+                            </div>  
+                        </div>
+                        <div class="name-comic">
+                            <h1>Ta làm chị dâu nam chính </h1>
+                        </div>
+                    </div>
+                    <div class="col l-2 m-3 c-4 story-item">
+                        <a href="">
+                         <img src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg" alt="Ta làm chị dâu của nam chính" class="img-fluid" width="150" height="230" loading="lazy">
+                        </a>
+                        <div class="card-title">
+                            <div class="card-item">
+                                <p class="card-green">Full</p>
+                            </div>  
+                        </div>
+                        <div class="name-comic">
+                            <h1>Ta làm chị dâu nam chính </h1>
+                        </div>
+                    </div>
+                    <div class="col l-2 m-3 c-4 story-item">
+                        <a href="">
+                         <img src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg" alt="Ta làm chị dâu của nam chính" class="img-fluid" width="150" height="230" loading="lazy">
+                        </a>
+                        <div class="card-title">
+                            <div class="card-item">
+                                <p class="card-green">Full</p>
+                            </div>  
+                        </div>
+                        <div class="name-comic">
+                            <h1>Ta làm chị dâu nam chính </h1>
+                        </div>
+                    </div>
+                    <div class="col l-2 m-3 c-4 story-item">
+                        <a href="">
+                         <img src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg" alt="Ta làm chị dâu của nam chính" class="img-fluid" width="150" height="230" loading="lazy">
+                        </a>
+                        <div class="card-title">
+                            <div class="card-item">
+                                <p class="card-green">Full</p>
+                            </div>  
+                        </div>
+                        <div class="name-comic">
+                            <h1>Ta làm chị dâu nam chính </h1>
+                        </div>
+                    </div>
+                    <div class="col l-2 m-3 c-4 story-item">
+                        <a href="">
+                         <img src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg" alt="Ta làm chị dâu của nam chính" class="img-fluid" width="150" height="230" loading="lazy">
+                        </a>
+                        <div class="card-title">
+                            <div class="card-item">
+                                <p class="card-green">Full</p>
+                            </div>  
+                        </div>
+                        <div class="name-comic">
+                            <h1>Ta làm chị dâu nam chính </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="grid wide">
+        <div class="row footer-content">
+          <div class="logo col l-2">
+            <h1><span>T</span>ruyen Chu</h1>
+            <button class="btn ft-top-up" id="top-up">Về trang đầu</button>
+          </div>
+          <div class="about-us l-6">
+            <p>
+              truyenchu là nơi cập nhật những truyện hay và mới nhất từ các tác
+              giả nổi tiếng trong và ngoài nước.
+            </p>
+            <p>
+              Với hơn 20 thể loại truyện, đọc truyện trên truyenchu trở nên dễ
+              dàng hơn bao giờ hết với hệ thống đọc truyện tiện lợi và đa dạng.
+              Hãy đến với truyenchu để khám phá thế giới truyện đầy màu sắc!
+            </p>
+            <p>Liên hệ: truyenchu@gmail.com</p>
+          </div>
+          <div class="category l-4">
+            <ul class="row">
+              <li><a href="#">Truyện đẫu</a></li>
+              <li><a href="#">Truyện sau</a></li>
+              <li><a href="#">Truyện màu</a></li>
+              <li><a href="#">Truyện sau</a></li>
+              <li><a href="#">Truyện màu</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">Copyright © 2024 DevQuen All rights reserved.</div>
+    </footer>
+    <div id="loading-screen">
+      <div class="sharingon">
+        <div class="ring">
+          <div class="to"></div>
+          <div class="to"></div>
+          <div class="to"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/slider.js"></script>
+  </body>
+</html>

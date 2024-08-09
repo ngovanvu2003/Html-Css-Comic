@@ -20,8 +20,8 @@
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     />
     <link rel="stylesheet" href="./assets/css/gird.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/slider.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -44,13 +44,21 @@
           <div class="row account">
             <!-- Form Search MB -->
             <div class="form-search-mb">
-              <i id="on-search" class="fa-solid fa-magnifying-glass"></i>
+              <i id="on-search" class="fas fa-search"></i>
             </div>
 
             <!-- Account -->
             <div id="theme-toggler" class="fas fa-moon"></div>
             <div class="btn login">Đăng nhập</div>
             <div class="btn register">Đăng ký</div>
+
+            <div class="dropdown">
+              <button id="myButton" class="dropbtn">Tài khoản</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Đăng nhập</a>
+                <a href="#about">Đăng ký</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -85,15 +93,15 @@
           </div>
           <div class="filter">
             <a href="#" class=""
-              ><i class="fa-solid fa-filter"></i>Lọc truyện</a
-            >
+              ><i class="fas fa-ballot"></i>
+              Tất cả truyện
+            </a>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- Slider -->
-
     <div class="cascade-slider_container" id="cascade-slider">
       <div class="cascade-slider_slides">
         <div class="cascade-slider_item">
@@ -109,6 +117,7 @@
               <div class="content">Thể loại: Ngôn Tình</div>
 
               <div class="content">Lượt xem: 200</div>
+              zz
               <a class="button" href="#">Xem ngay</a>
             </div>
           </div>
@@ -117,7 +126,7 @@
           <div class="card align">
             <div class="photo">
               <img
-                src="https://cdn.enovel.mobi/covers/42/42213-chu-gia-lam-chieu-220x283.webp"
+                src="https://cdn.enovel.mobi/covers/40/40968-chu-doi-em-lon-nhe-220x283.webp?v=1"
               />
             </div>
             <div class="info">
@@ -148,7 +157,6 @@
           </div>
         </div>
       </div>
-
       <ol id="cascade" class="cascade-slider_nav">
         <li class="cascade-slider_dot cur"></li>
         <li class="cascade-slider_dot"></li>
@@ -158,18 +166,447 @@
       <span
         class="cascade-slider_arrow cascade-slider_arrow-left"
         data-action="prev"
-        ><i class="fa-solid fa-chevron-left"></i
+      >
+        <i class="fas fa-chevron-left"></i
       ></span>
       <span
         class="cascade-slider_arrow cascade-slider_arrow-right"
         data-action="next"
-        ><i class="fa-solid fa-chevron-right"></i
+        ><i class="fas fa-chevron-right"></i
       ></span>
     </div>
     <!-- End Slider -->
-    <main>
-      <h1 class="test">haha</h1>
-    </main>
+
+    <!-- Comic -->
+    <div class="grid wide">
+      <div class="preface">
+        <p>
+          Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp
+          đầy đủ và cập nhật liên tục.
+        </p>
+        <button class="btn">Góp ý chúng tôi</button>
+      </div>
+
+      <!-- truyen hot -->
+      <div class="story-main">
+        <h2 class="">
+          <a title="Truyện Hot" href="">Truyện hot</a>
+        </h2>
+
+        <div class="story-grid">
+          <div class="row hot-list">
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-red">Mới</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-red">Mới</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-red">Mới</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-red">Mới</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-red">Mới</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-red">Mới</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- truyen moi cap nhat -->
+      <div class="story-new">
+        <div class="row story-new-main">
+          <div class="col l-9 m-9 c-12">
+            <h2 class="title">Truyện mới cập nhật</h2>
+            <div class="story-new-list">
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+              <div class="row story-new-item">
+                <div class="col l-2 m-3 c-3 new-story-genre">
+                  <a href=""> Ngôn Tình </a>
+                </div>
+                <div class="col l-5 m-5 c-5 new-story-name">
+                  <a href=""> Dục Phu Kiều Thê </a>
+                </div>
+                <div class="col l-2 m-4 c-3 new-story-chapter">
+                  <a href="">Chương 24 </a>
+                </div>
+                <div class="col l-2 m-0 c-0 new-story-time">1 phút trước</div>
+              </div>
+            </div>
+          </div>
+          <div class="col l-3 m-3 c-12 list-genre">
+            <h2>Thể loại truyện</h2>
+            <div class="row">
+              <div class="col l-6 m-6 c-6 genre">
+                <a href=""> truyện tranh</a>
+              </div>
+              <div class="col l-6 m-6 c-6 genre">
+                <a href=""> truyện tranh</a>
+              </div>
+              <div class="col l-6 m-6 c-6 genre">
+                <a href=""> truyện tranh</a>
+              </div>
+              <div class="col l-6 m-6 c-6 genre">
+                <a href=""> truyện tranh</a>
+              </div>
+              <div class="col l-6 m-6 c-6 genre">
+                <a href=""> truyện tranh</a>
+              </div>
+              <div class="col l-6 m-6 c-6 genre">
+                <a href=""> truyện tranh</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- truyen goi y -->
+      <div class="story-main">
+        <h2 class="">
+          <a title="Truyện Hot" href="">Gợi ý cho bạn</a>
+        </h2>
+
+        <div class="story-grid">
+          <div class="row hot-list">
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-green">Full</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-green">Full</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-green">Full</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-green">Full</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-green">Full</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+            <div class="col l-2 m-3 c-4 story-item">
+              <a href="">
+                <img
+                  src="https://etruyen.vn/images/stories/ta-lam-chi-dau-cua-nam-chinh-cu-nguyet-luu-hoa.jpg"
+                  alt="Ta làm chị dâu của nam chính"
+                  class="img-fluid"
+                  width="150"
+                  height="230"
+                  loading="lazy"
+                />
+              </a>
+              <div class="card-title">
+                <div class="card-item">
+                  <p class="card-green">Full</p>
+                </div>
+              </div>
+              <div class="name-comic">
+                <h1>Ta làm chị dâu nam chính</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End  Comic -->
 
     <footer>
       <div class="grid wide">
@@ -203,7 +640,16 @@
       </div>
       <div class="copyright">Copyright © 2024 DevQuen All rights reserved.</div>
     </footer>
-    <div id="loading-screen"><h1>đợi sý đi</h1></div>
+    <div id="loading-screen">
+      <div class="sharingon">
+        <div class="ring">
+          <div class="to"></div>
+          <div class="to"></div>
+          <div class="to"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/slider.js"></script>
   </body>
